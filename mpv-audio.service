@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/mpv --no-video --loop-playlist=inf --input-ipc-server=/tmp/mpvsocket --playlist=/home/chegney/mpv-audio-service/playlist.m3u8 --save-position-on-quit --term-playing-msg="Now playing: ${media-title}"
+ExecStart=/usr/bin/mpv --no-video --loop-playlist=inf --input-ipc-server=/tmp/mpvsocket --playlist=/home/chegney/mpv-audio-service/playlist.m3u8 --save-position-on-quit --term-playing-msg="Now playing: ${media-title} --force-media-title"
 Restart=always
 RestartSec=3
 
