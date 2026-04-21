@@ -53,6 +53,7 @@ Control playback:
 ./mpv-control.sh toggle #play/pause
 ./mpv-control.sh next
 ./mpv-control.sh prev
+./mpv-control.sh status
 ```
 
 Enable auto-start on boot:
