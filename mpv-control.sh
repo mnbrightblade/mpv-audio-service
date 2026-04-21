@@ -15,5 +15,5 @@ case "$1" in
       echo "Current: $current"
       echo "Next: $next"
       ;;
-  *) echo "Usage: $0 {play|pause|toggle|next|prev}" >&2; exit 1 ;;
+  *) echo "Usage: $0 {play|pause|toggle|next|prev|status}" >&2; exit 1 ;;
 esac   

@@ -1,6 +1,8 @@
 #!/bin/bash
-url="$1"
-playlist_file="$HOME/mpv-audio-service/playlist.txt"
+artist="$1"
+title="$2"
+url="$3"
+playlist_file="$HOME/mpv-audio-service/playlist.m3u8"
 socket="/tmp/mpvsocket"
 
 # Check if URL is already in MPV's current playlist
@@ -15,7 +17,10 @@ if grep -q "^$url$" "$playlist_file" 2>/dev/null; then
     exit 0
 fi
 
-# Add to file and MPV playlist
+# Add metadata and URL to playlist file
+echo "#EXTINF:0,$artist - $title" >> "$playlist_file"
 echo "$url" >> "$playlist_file"
+
+# Add to running MPV stream
 echo '{ "command": ["loadfile", "'"$url"'", "append"] }' | socat - "$socket"
 echo "Added: $url"   

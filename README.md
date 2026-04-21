@@ -6,8 +6,8 @@ A systemd user service that plays a playlist of audio URLs using MPV in audio-on
 
 - 🎵 Endless audio playback from a URL list
 - 🔁 Resumes playback position on restart
-- ➕ Add URLs dynamically (no duplicates)
-- ▶️ Control playback: play, pause, next, previous
+- ➕ Add URLs dynamically (duplicates are checked)
+- ▶️ Control playback: play, pause, next, previous, and status (current and next entry)
 - 📦 Easy setup with install script
 
 ## Requirements
@@ -43,7 +43,7 @@ systemctl --user start mpv-audio.service
 Add a URL to the playlist:
 
 ```bash
-./add-to-mpv.sh "https://youtube.com/watch?v=..."
+./add-to-mpv.sh "artist" "title" "https://youtube.com/watch?v=..."
 ```
 
 Control playback:
