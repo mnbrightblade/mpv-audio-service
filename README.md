@@ -15,6 +15,7 @@ A systemd user service that plays a playlist of audio URLs using MPV in audio-on
 - `mpv` (with `yt-dlp` support)
 - `socat` (for IPC communication)
 - `systemd --user` (enabled)
+- `jq` (for control script status display)
 
 ## Installation
 
